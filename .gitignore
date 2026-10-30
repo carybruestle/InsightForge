@@ -1,23 +1,49 @@
-# Python cache
+# Python cache and build outputs
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+build/
+dist/
+htmlcov/
+.coverage
+.coverage.*
 
 # Virtual environments
 .venv/
 venv/
 env/
-.env
+ENV/
 
-# Local project artifacts
+# Local secrets and configuration
+.env
+.env.*
+!.env.example
+
+# Local project artifacts and generated state
 .cache/
+.ipynb_checkpoints/
 *.log
 *.tmp
+*.bak
+*.swp
 ~$*
+insightforge.log
 
-# Tooling
-.pytest_cache/
-.mypy_cache/
+# Generated indexes and outputs
+indexes/**/*.faiss
+indexes/**/*.pkl
+evals/reports/*.jsonl
+evals/reports/*.md
+
+# Tooling and editor state
 .vscode/
+.idea/
 
 # OS files
 .DS_Store
