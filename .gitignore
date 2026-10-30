@@ -8,6 +8,12 @@ venv/
 env/
 .env
 
+# Local project artifacts
+.cache/
+*.log
+*.tmp
+~$*
+
 # Tooling
 .pytest_cache/
 .mypy_cache/
